@@ -28,4 +28,8 @@ class AuthController extends Controller
         return redirect('/dashboard')->with('success', 'Account created successfully!');
     }
 
+    public function show(){
+        return view('auth.forgot_password');
+    }
+
 }

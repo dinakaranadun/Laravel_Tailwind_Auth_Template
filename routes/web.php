@@ -16,4 +16,5 @@ Route::middleware('guest')->group(function(){
    Route::get('/register',[AuthController::class, 'create']);
    Route::post('/register',[AuthController::class, 'store']);
    Route::post('/signin',[SessionController::class, 'store']);
+   Route::get('/forgot-password',[AuthController::class,'show']);
 });
