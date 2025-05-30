@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\SessionController;
 use App\Http\Controllers\HomePageController;
+use App\Http\Controllers\Auth\ForgotPasswordController;
 
 Route::middleware('auth')->group(function(){
    Route::get('/dashboard',[HomePageController::class,'index']);
@@ -17,4 +18,5 @@ Route::middleware('guest')->group(function(){
    Route::post('/register',[AuthController::class, 'store']);
    Route::post('/signin',[SessionController::class, 'store']);
    Route::get('/forgot-password',[AuthController::class,'show']);
+   Route::post('/forgot-password',[ForgotPasswordController::class]);
 });

@@ -1,6 +1,5 @@
 <x-layout>
     <x-forms.centertheform imageURL="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=600">
-       
         <form method="POST" action="/forgot-password" class="space-y-8">
             @csrf
             <div>
@@ -11,7 +10,8 @@
                 <x-forms.button type="submit">Send Reset Link</x-forms.button>
             </div>   
         </form>
-        <x-forms.formtext labeltext="Remember your password?" linktext="Sign In" linkurl="/signin" />   
-    </x-forms.centertheform>
-        
+        <x-forms.formtext labeltext="Remember your password?" linktext="Sign In" linkurl="/signin" /> 
+        <x-alerts.alertmessages type="success" :message="session('status')" />
+        <x-alerts.alertmessages type="error" :message="$errors->first('email')" />  
+    </x-forms.centertheform> 
 </x-layout>
