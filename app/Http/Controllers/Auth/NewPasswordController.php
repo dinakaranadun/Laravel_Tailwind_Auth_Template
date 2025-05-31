@@ -1,13 +1,15 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Auth;
 
 use App\Models\User;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Password;
 use Illuminate\Auth\Events\PasswordReset;
+
 
 class NewPasswordController extends Controller
 {
@@ -32,7 +34,7 @@ class NewPasswordController extends Controller
     );
  
     return $status === Password::PasswordReset
-        ? redirect()->route('login')->with('status', '__($status)')
+        ? redirect()->route('login')->with('status', __($status))
         : back()->withErrors(['email' => [__($status)]]);
     }
 }
