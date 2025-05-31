@@ -17,12 +17,12 @@ class AuthController extends Controller
     public function store(Request $request)
     {
         $userAttributes = $request->validate([
-            'first_name' => 'required|string|max:255',
-            'last_name' => 'required|string|max:255',
-            'email' => 'required|string|email|max:255|unique:users',
-            'password' => 'required|string|min:8|confirmed',
+            'first_name' => ['required','string','max:255'],
+            'last_name' => ['required','string','max:255'],
+            'email' => ['required','email','unique:users,email'],
+            'password' => ['required','string','min:8','confirmed'],
         ]);
-
+        
         $user = User::create($userAttributes);     
         Auth::login($user);
         return redirect('/dashboard')->with('success', 'Account created successfully!');

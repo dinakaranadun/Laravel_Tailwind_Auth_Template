@@ -17,7 +17,8 @@
             </div>
             <div class="col-span-full">
               <x-forms.input label="Password" name="password" type="password" autocomplete="new-password" required />
-            </div><div class="col-span-full">
+            </div>
+            <div class="col-span-full">
               <x-forms.input label="Confirm Password" name="password_confirmation" type="password" autocomplete="new-password" required />
             </div>
           </div>

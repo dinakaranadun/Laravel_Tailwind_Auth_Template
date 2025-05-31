@@ -34,7 +34,7 @@
             @endif
 
             {{-- Message --}}
-            <span class="font-bold text-base capitalize">we are done here!{{ $message }}</span>
+            <span class="font-bold text-base capitalize">{{ $message }}</span>
         </div>
     </div>
 @endif

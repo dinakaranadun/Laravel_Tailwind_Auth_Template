@@ -15,6 +15,9 @@
           </div>
         </form>
         <x-forms.formtext labeltext="Don't have an account?" linktext="Sign Up" linkurl="/register" />
+        <x-alerts.alertmessages type="success" :message="session('status')" />
+        <x-alerts.alertmessages type="error" :message="$errors->first()" />
+        
       </div>
     </div>
   </x-forms.centertheform>

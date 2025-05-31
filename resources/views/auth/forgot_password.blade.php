@@ -12,8 +12,6 @@
         </form>
         <x-forms.formtext labeltext="Remember your password?" linktext="Sign In" linkurl="/signin" /> 
         <x-alerts.alertmessages type="success" :message="session('status')" />
-        <x-alerts.alertmessages type="error" :message="$errors->first('email')" /> 
-        <x-alerts.alertmessages type="info" :message="$errors->first('email')" />
-        <x-alerts.alertmessages type="warning" :message="$errors->first('email')" />     
+        <x-alerts.alertmessages type="error" :message="$errors->first('email')" />    
     </x-forms.centertheform> 
 </x-layout>
