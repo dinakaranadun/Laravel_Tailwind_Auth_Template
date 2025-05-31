@@ -19,16 +19,13 @@ Route::middleware('guest')->group(function(){
    Route::post('/register',[AuthController::class, 'store']);
    Route::post('/signin',[SessionController::class, 'store']);
    Route::get('/forgot-password',[AuthController::class,'show']);
-
    Route::post('/forgot-password', ForgotPasswordController::class);
-    Route::get('/reset-password/{token}', function (string $token) {
+   
+   Route::get('/reset-password/{token}', function (string $token) {
         return view('auth.reset-password', ['token' => $token]);
-    })->name('password.reset');
+   })->name('password.reset');
 
    Route::get('/reset-password', function () {abort(404);});
    Route::post('/reset-password',[NewPasswordController::class, 'store']);
-
-
-
 });
 

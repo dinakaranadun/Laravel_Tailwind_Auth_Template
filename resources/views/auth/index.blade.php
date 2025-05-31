@@ -8,8 +8,8 @@
       <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
         <form class="space-y-6" action="/signin" method="POST">
           @csrf
-          <x-forms.input label="Email address" name="email" type="email" required autofocus autocomplete="email"  />
-          <x-forms.input label="Password" name="password" type="password" subLabel="true" href="/forgot-password" subText="Forgot Password" required autocomplete="current-password" />
+          <x-forms.input label="Email address" name="email" type="email" required autofocus autocomplete="email"/>
+          <x-forms.input label="Password" name="password" type="password" subLabel="true" href="/forgot-password" subText="Forgot Password?" required autocomplete="current-password" />
           <div>
             <x-forms.button type="submit">Sign In</x-forms.button>
           </div>
