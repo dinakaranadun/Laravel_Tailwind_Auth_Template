@@ -1,7 +1,8 @@
 import './bootstrap';
 
+// Profile picture dropdown toggle
 document.addEventListener("DOMContentLoaded", function () {
-  // Profile dropdown toggle
+ 
   console.log("Script loaded"); 
   const profileToggle = document.getElementById('profile-toggle');
   const profileDropdown = document.getElementById('profile-dropdown');
