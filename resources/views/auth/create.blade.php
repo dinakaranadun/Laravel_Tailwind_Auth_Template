@@ -1,5 +1,5 @@
 <x-layouts.layout>
-  <x-forms.centertheform imageURL="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=600">
+  <x-forms.centertheform title="Register">
     <form method="POST" action="/register" class="space-y-8">
      @csrf
       <div>
@@ -23,7 +23,6 @@
             </div>
           </div>
         </div>
-        <x-forms.button type="submit">Register</x-forms.button>
     </form>
     <x-forms.formtext labeltext="Already have an account?" linktext="Sign In" linkurl="/" />
 </x-forms.centertheform>

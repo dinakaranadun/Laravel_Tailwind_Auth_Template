@@ -1,5 +1,5 @@
 <x-layouts.layout>
-    <x-forms.centertheform imageURL="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=600">
+    <x-forms.centertheform>
         <form method="POST" action="/forgot-password" class="space-y-8">
             @csrf
             <div>

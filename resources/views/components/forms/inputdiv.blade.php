@@ -1,4 +1,4 @@
-@props(['label','name','subLabel' => false,'href'=>null,'subText' => null])
+@props(['label'=>null,'name','subLabel' => false,'href'=>null,'subText' => null])
 
 <div>
     @if ($label)

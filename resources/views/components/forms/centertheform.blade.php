@@ -7,7 +7,7 @@
     if ($imageURL) {
         $style = "background-image: url('$imageURL');";
     }else{
-        $classes .= "bg-gradient-to-r from-blue-900 to-white";
+        $classes .= "absolute inset-0 -z-10 h-full w-full items-center px-5 py-24 [background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)]";
     }
 @endphp
 
