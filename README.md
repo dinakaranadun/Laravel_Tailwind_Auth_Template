@@ -65,5 +65,7 @@ npm run build
 # 11. Start the Laravel development server
 php artisan serve
 or you can use herd
+
+# 12. Make sure to run the queue worker
 ```
 ## If you have any questions or issues, feel free to open an issue
